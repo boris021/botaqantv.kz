@@ -3,19 +3,22 @@
 	position: relative;
 	margin-top: -162px;
 	padding-top: 200px;
-	// padding-bottom: 200px;
 	height: 828px;
-
-	&__container {}
 
 	&__body {
 		display: flex;
 		align-items: center;
-		// justify-content: space-around
 		flex-wrap: wrap;
 	}
 
-	&__content {}
+	&__content {
+		margin-right: 150px;
+
+		@media (max-width:$tablet) {
+			margin-right: 0;
+		}
+	}
+
 
 	&__content-title {
 		font-family: 'Fredoka One';
@@ -34,14 +37,53 @@
 		@include adaptiveValue("margin-bottom", 45, 25);
 	}
 
-	&__content-link {}
 
 	&__img {
+		position: relative;
 		width: 574px;
 
-		img {
-			width: 100%;
-			height: 100%;
+		@media (max-width:$tablet) {
+			margin-top: 50px;
+		}
+
+		&::after {
+			content: '';
+			background: url(../img/pngegg.png) no-repeat;
+			position: absolute;
+			width: 188.08px;
+			height: 233.48px;
+			top: -50px;
+			right: 200px;
+
+			@media (max-width:$tablet) {
+				display: none;
+			}
+		}
+
+		&::before {
+			content: '';
+			background: url(../img/pngegg2.png) no-repeat;
+			position: absolute;
+			width: 319px;
+			height: 396px;
+			bottom: -150px;
+			left: -200px;
+		}
+
+		&-play {
+			content: '';
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			top: 47%;
+			left: 32%;
+			transition: all 0.3s ease 0s;
+			cursor: pointer;
+			z-index: 2;
+
+			&:hover {
+				opacity: 0.8;
+			}
 		}
 	}
 
@@ -156,6 +198,7 @@
 	position: relative;
 	display: flex;
 	align-items: flex-end;
+	height: 822px;
 
 	&__body {
 		display: flex;
@@ -163,9 +206,31 @@
 		flex-wrap: wrap;
 	}
 
-	&__yuotube {}
+	&__yuotube {
+		background: #D9D9D9;
+		box-shadow: 0px 20px 47px rgba(0, 0, 0, 0.25);
+		border-radius: 20px;
+		width: 50%;
+		height: 385px;
+		margin-right: 50px;
 
-	&__content {}
+		@media (max-width:$tablet) {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+
+		@media (max-width:$tablet) {
+			margin-right: 0;
+		}
+	}
+
+	&__content {
+		width: 45%;
+
+		@media (max-width:$tablet) {
+			width: 100%;
+		}
+	}
 
 	&__content-title {
 		font-family: 'Balsamiq Sans';
@@ -177,7 +242,16 @@
 		margin-bottom: 35px;
 	}
 
-	&__content-text {}
+	&__content-text {
+		font-family: 'Fuzzy Bubbles';
+		font-weight: 700;
+		line-height: math.div(19, 15);
+		color: #333333;
+
+		& p {
+			margin-bottom: 20px;
+		}
+	}
 
 	&__bg {
 		content: '';
@@ -187,3 +261,51 @@
 		z-index: -1;
 	}
 }
+
+// slider ========================================================================================================================================================
+.slider {
+	@include adaptiveValue("margin-top", 100, 40);
+
+	&__title {
+		font-family: 'Balsamiq Sans';
+		font-weight: 700;
+		@include adaptiveValue("font-size", 40, 30);
+		text-align: center;
+		color: #E32600;
+		margin-bottom: 25px;
+	}
+}
+
+.slide {
+
+	&__slider {}
+
+	&__wrapper {}
+
+	&__slide {
+		position: relative;
+		background: #FFA200;
+		box-shadow: 0px 4px 30px #E32600;
+		border-radius: 20px;
+		height: 251px;
+
+		img {
+			width: 277px;
+			// height: 287px;
+		}
+	}
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-pagination {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
+
+.swiper-scrollbar {}
