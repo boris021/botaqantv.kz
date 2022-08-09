@@ -1,16 +1,88 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="main">
+				<div class="main__container">
+					<div class="main__body">
+						<div class="main__content">
+							<h1 class="main__content-title">BOTAQAN</h1>
+							<h2 class="main__content-subtitle">балалардың медиа кеңістігі</h2>
+							<a href="https://youtube.com/channel/UC9zWwx2lKkpu4P7FULMP0ig "
+								class="main__content-link btn">Смотреть на YouTube</a>
+						</div>
+						<div class="main__img">
+							<img src="@img/main-img.png" alt="main-img">
+						</div>
+					</div>
+				</div>
+				<img src="@img/bg-main.png" alt="main" class="main__bg">
+			</section>
+
+			<section class="pres">
+				<div class="pres__container">
+					<div class="pres__body">
+						<div class="pres__img">
+							<img src="@img/pres/pres-img.png" alt="">
+						</div>
+						<div class="pres__content">
+							<div class="pres__content-text">
+								«Балалар - мемлекетіміздің жарқын болашағының кепілі. Сондықтан да 2022 жылды Балалар жылы деп
+								жариялау керек деп есептеймін. Әңгіме жалаң ұран мен мерекелік шаралар туралы емес. Бірінші
+								кезекте билік тарапынан балаларды қорғау үшін денсаулық сақтау, білім беру, әлеуметтік қолдау
+								бағытында нақты шаралар қолға алынуы керек. Өскелең ұрпақтың үйлесімді дамуы мен бақытты балалық
+								шағы – біздің жалпыұлттық міндетіміз»
+							</div>
+							<div class="pres__content-img">
+								<img src="@img/pres/present.png" alt="present">
+							</div>
+						</div>
+					</div>
+				</div>
+				<img src="@img/pres/bg-pres.png" alt="pres" class="pres__bg">
+			</section>
+
+			<section class="video">
+				<div class="video__container">
+					<div class="video__body">
+						<div class="video__yuotube">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/RPfqxXHaaKI"
+								title="YouTube video player" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
+						<div class="video__content">
+							<div class="video__content-title">Арна туралы</div>
+							<div class="video__content-text">
+								<p>«Ботақан» атты балалардың медиа кеңістігі Президентіміз Қ.Тоқаевтың балалар жылында берген
+									тапсырмасы негізінде ашылды.</p>
+								<p>Бүгінде көптеген қазақ отбасыларында сәбилердің тілі орысша шығуда, себебі әлеуметтік желіде
+									мемлекеттік тілдегі контенттер өте аз. «Ботақан» атты балалардың сандық (цифрлық) медиа
+									кеңістігі осы олқылықтың орнын толтырады. Орталық қарамағына қазақ тілінде жетік сөйлейтін
+									балаларды жинап, қызықты контенттер әзірлейді. Түрлі ойындар, әңгімелер, танымдық және
+									ойын-сауықты айдарлар біздің медиа кеңістікте таралады. Игі бастаманы ҚР Ақпарат және
+									Қоғамдық даму министрлігі, ҚР Білім және Ғылым министрлігі, ҚР Мәдениет және Спорт
+									министрлігі қолдайды деген үміттеміз».
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img src="img/bg-video.png" alt="video" class="video__bg">
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

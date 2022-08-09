@@ -1,3 +1,189 @@
-//====================================================================================================
+// main ====================================================================================================
+.main {
+	position: relative;
+	margin-top: -162px;
+	padding-top: 200px;
+	// padding-bottom: 200px;
+	height: 828px;
 
-//====================================================================================================
+	&__container {}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		// justify-content: space-around
+		flex-wrap: wrap;
+	}
+
+	&__content {}
+
+	&__content-title {
+		font-family: 'Fredoka One';
+		font-weight: 400;
+		@include adaptiveValue("font-size", 64, 50);
+		color: #E32600;
+		margin-bottom: 17px;
+	}
+
+	&__content-subtitle {
+		font-family: 'Balsamiq Sans';
+		font-weight: 400;
+		@include adaptiveValue("font-size", 36, 30);
+		line-height: math.div(43, 36);
+		color: #FFFFFF;
+		@include adaptiveValue("margin-bottom", 45, 25);
+	}
+
+	&__content-link {}
+
+	&__img {
+		width: 574px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__bg {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+// pres ====================================================================================================
+.pres {
+	@include adaptiveValue("margin-top", 80, 40);
+	position: relative;
+	padding-bottom: 150px;
+
+	&::after {
+		content: '';
+		background: url(../img/pres/girl.png) no-repeat;
+		position: absolute;
+		width: 632px;
+		height: 346px;
+		bottom: 0;
+		left: 0;
+
+		@media (max-width:$tablet) {
+			display: none;
+		}
+	}
+
+	&::before {
+		content: '';
+		background: url(../img/pres/tv.png) no-repeat;
+		position: absolute;
+		width: 280px;
+		height: 304px;
+		transform: rotate(17.38deg);
+		bottom: -10px;
+		right: 0;
+		z-index: 2;
+
+		@media (max-width:$tablet) {
+			display: none;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__img {
+		width: 468.18px;
+		height: 595.55px;
+
+		@media (max-width:$tablet) {
+			display: none;
+		}
+	}
+
+	&__content {
+		position: relative;
+		max-width: 558px;
+	}
+
+	&__content-text {
+		background: rgba(255, 162, 0, 0.54);
+		box-shadow: 0px 4px 47px rgba(0, 0, 0, 0.25), inset 0px 4px 30px #FFA200;
+		backdrop-filter: blur(46px);
+		border-radius: 20px;
+		padding: 55px 40px;
+		font-family: 'Fuzzy Bubbles';
+		font-weight: 700;
+		line-height: math.div(19, 15);
+		color: #333333;
+
+		@media (max-width:$tablet) {
+			padding: 30px;
+		}
+	}
+
+	&__content-img {
+		position: absolute;
+		width: 267px;
+		height: 267px;
+		top: -50%;
+		right: -38%;
+
+		@media (max-width:$tablet) {
+			top: -40%;
+
+			img {
+				width: 150px;
+			}
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
+// video =======================================================================================================================================================
+.video {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+
+	&__body {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__yuotube {}
+
+	&__content {}
+
+	&__content-title {
+		font-family: 'Balsamiq Sans';
+		font-weight: 700;
+		@include adaptiveValue("font-size", 40, 30);
+		line-height: math.div(48, 40);
+		color: #FFA200;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		margin-bottom: 35px;
+	}
+
+	&__content-text {}
+
+	&__bg {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+}

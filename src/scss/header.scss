@@ -1,11 +1,151 @@
 //====================================================================================================
+.header {
+	@include adaptiveValue("margin-top", 33, 15);
+	z-index: 5;
+
+	@media (max-width:$mobile) {
+		margin-top: 0;
+	}
+
+	&__container {
+		@media (max-width:$mobile) {
+			padding: 0;
+		}
+	}
+
+	&__body {
+		background: linear-gradient(180deg, #FFA200 10.86%, #FFFFFF 175.62%);
+		box-shadow: 0px 30px 47px #FFA200;
+		border-radius: 20px;
+		max-width: 1057px;
+		max-height: 129px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		margin: auto;
+
+		@media (max-width:$tablet) {
+			border-radius: 0px;
+		}
+	}
+
+	&__logo {
+		max-width: 139px;
+
+		@media (max-width:$mobile) {
+			// height: 80px;
+
+			img {
+				height: 80px;
+			}
+		}
+	}
+
+	&__menu {}
+
+	&__actions {
+		@media (max-width:$tablet) {
+			display: none;
+		}
+
+		@media (max-width:$mobile) {
+			display: block;
+			margin-top: 40px;
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__actions-link {
+		margin-right: 20px;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.menu {
+
+	&__body {
+
+		@media (max-width:$tablet) {
+			position: fixed;
+			width: 100%;
+			height: 100vh;
+			top: 0px;
+			left: -100%;
+			overflow: auto;
+			background: rgba(255, 255, 255, 1);
+			box-shadow: none;
+			padding: 40px 20px;
+			z-index: 4;
+			transition: all 0.3s ease 0s;
+
+			.menu-open & {
+				left: 0;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				position: fixed;
+				height: 70px;
+				width: 100%;
+				top: 0px;
+				left: 0;
+				z-index: 50;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+
+		@media (max-width:$tablet) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		margin-right: 20px;
+		font-family: 'Fuzzy Bubbles';
+		font-weight: 700;
+		color: #FFFFFF;
+		transition: all 0.3s ease 0s;
+
+		@media (max-width:$tablet) {
+			color: #333;
+			margin-right: 0;
+			margin-bottom: 20px;
+			font-size: 26px;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {}
+}
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
+
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
@@ -13,6 +153,7 @@
 		height: rem(18);
 		cursor: pointer;
 		z-index: 5;
+
 		span,
 		&::before,
 		&::after {
@@ -22,28 +163,34 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: #333;
 		}
+
 		&::before {
 			top: 0;
 		}
+
 		&::after {
 			bottom: 0;
 		}
+
 		span {
 			top: calc(50% - rem(1));
 		}
+
 		.menu-open & {
 			span {
 				width: 0;
 			}
+
 			&::before,
-			&::after {
-			}
+			&::after {}
+
 			&::before {
 				top: calc(50% - rem(1));
 				transform: rotate(-45deg);
 			}
+
 			&::after {
 				bottom: calc(50% - rem(1));
 				transform: rotate(45deg);
@@ -51,4 +198,3 @@
 		}
 	}
 }
-*/
