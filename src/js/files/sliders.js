@@ -19,11 +19,11 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-import "../../scss/base/swiper.scss";
+// import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
 import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
-import 'swiper/css';
+// import 'swiper/css';
 
 // Инициализация слайдеров
 function initSliders() {
@@ -38,13 +38,13 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
-			spaceBetween: 30,
-			autoHeight: true,
+			spaceBetween: 40,
+			autoHeight: false,
 			speed: 800,
+			loop: true,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
