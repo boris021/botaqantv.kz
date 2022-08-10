@@ -291,14 +291,18 @@
 	&__slide {
 		position: relative;
 		background: #FFA200;
-		// box-shadow: 0px 4px 0px #E32600;
 		border-radius: 20px;
-		height: 251px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		& img {
 			height: 250px;
-			margin-top: -80px;
-			visibility: visible;
+			margin-top: -50px;
+
+			@media (max-width:$mobile) {
+				margin-top: -70px;
+			}
 		}
 	}
 
@@ -306,6 +310,10 @@
 
 .swiper {
 	position: relative;
+
+	@media (max-width:$mobile) {
+		padding: 0 !important
+	}
 }
 
 .swiper-wrapper {}
@@ -314,15 +322,19 @@
 	height: 251px;
 }
 
-.swiper-pagination {}
+.swiper-pagination {
+	display: none;
 
-.swiper-button-prev {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 50% !important;
-	left: 0;
+	@media (max-width:$mobile) {
+		display: block;
+	}
 }
 
-.swiper-button-next {}
+.swiper-button-prev {}
+
+.swiper-button-next,
+.swiper-button-prev {
+	@media (max-width:$mobile) {
+		display: none !important;
+	}
+}

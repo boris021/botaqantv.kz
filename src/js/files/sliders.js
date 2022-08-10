@@ -8,7 +8,8 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper, {
-	Navigation
+	Navigation,
+	Pagination,
 } from 'swiper';
 /*
 Основниые модули слайдера:
@@ -34,44 +35,29 @@ function initSliders() {
 		new Swiper('.swiper', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 3,
 			spaceBetween: 40,
-			autoHeight: false,
+			autoHeight: true,
 			speed: 800,
 			loop: true,
-
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//preloadImages: false,
-			//lazy: true,
-
-			/*
 			// Эффекты
 			effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+
 
 			// Пагинация
-			/*
+
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
 			},
-			*/
 
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
 
 			// Кнопки "влево/вправо"
 			navigation: {
@@ -80,31 +66,20 @@ function initSliders() {
 			},
 
 			// Брейкпоинты
-			/*
+
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+					spaceBetween: 20,
 				},
 				768: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
 				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					slidesPerView: 3,
 				},
 			},
-			*/
-			// События
-			on: {
-
-			}
 		});
 	}
 }
