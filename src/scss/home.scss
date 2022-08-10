@@ -3,7 +3,7 @@
 	position: relative;
 	margin-top: -162px;
 	padding-top: 200px;
-	height: 828px;
+	height: 900px;
 
 	&__body {
 		display: flex;
@@ -18,7 +18,6 @@
 			margin-right: 0;
 		}
 	}
-
 
 	&__content-title {
 		font-family: 'Fredoka One';
@@ -36,7 +35,6 @@
 		color: #FFFFFF;
 		@include adaptiveValue("margin-bottom", 45, 25);
 	}
-
 
 	&__img {
 		position: relative;
@@ -95,9 +93,15 @@
 	&__bg {
 		content: '';
 		position: absolute;
+		width: 100%;
+		height: 100%;
 		top: 0;
 		left: 0;
 		z-index: -1;
+
+		@media (max-width:$mobile) {
+			width: auto;
+		}
 	}
 }
 
@@ -192,9 +196,15 @@
 
 	&__bg {
 		position: absolute;
+		width: 100%;
+		height: 100%;
 		bottom: 0;
 		left: 0;
 		z-index: -1;
+
+		@media (max-width:$mobile) {
+			width: auto;
+		}
 	}
 }
 

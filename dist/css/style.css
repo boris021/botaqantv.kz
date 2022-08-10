@@ -446,7 +446,7 @@ body::after {
   position: relative;
   margin-top: -162px;
   padding-top: 200px;
-  height: 828px;
+  height: 900px;
 }
 
 .main__body {
@@ -567,6 +567,8 @@ body::after {
 .main__bg {
   content: "";
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   z-index: -1;
@@ -648,6 +650,8 @@ body::after {
 
 .pres__bg {
   position: absolute;
+  width: 100%;
+  height: 100%;
   bottom: 0;
   left: 0;
   z-index: -1;
@@ -1992,6 +1996,14 @@ button.swiper-pagination-bullet {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
+  }
+
+  .main__bg {
+    width: auto;
+  }
+
+  .pres__bg {
+    width: auto;
   }
 
   .sw__slide img {
