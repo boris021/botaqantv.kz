@@ -865,6 +865,7 @@ body::after {
 
 .tv__item {
   width: 45%;
+  z-index: 999999;
 }
 
 .tv__item-img {
@@ -935,6 +936,7 @@ body::after {
   margin: auto;
   display: block;
   text-align: center;
+  z-index: 5;
 }
 
 .tv__item-btn:hover {
